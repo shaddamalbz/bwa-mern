@@ -3,9 +3,9 @@ import Fade from "react-reveal/Fade";
 
 import ImageHero from "assets/images/img-hero.jpg";
 import ImageHeroFrame_ from "assets/images/img-hero-frame.jpg";
-import IconCities from "assets/icons/icon-cities.svg";
-import IconTraveler from "assets/icons/icon-traveler.svg";
-import IconTreasure from "assets/icons/icon-treasure.svg";
+import IconCities from "assets/images/icons/icon-cities.svg";
+import IconTraveler from "assets/images/icons/icon-traveler.svg";
+import IconTreasure from "assets/images/icons/icon-treasure.svg";
 
 import Button from "elements/Button";
 

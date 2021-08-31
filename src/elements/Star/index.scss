@@ -8,7 +8,7 @@
     position: absolute;
     z-index: 2;
     display: inline-flex;
-    mask: url("../../assets/images/icon/star.svg") no-repeat center left;
+    mask: url("../../assets/images/icons/star.svg") no-repeat center left;
     &:not(.placeholder) {
       z-index: 2;
       background-color: $yellow;
