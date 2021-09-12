@@ -69,7 +69,7 @@ export default function Payment(props) {
                 onChange={props.onChange}
               />
 
-              <label htmlFor="bankHolder">Nama Pengirimk</label>
+              <label htmlFor="bankHolder">Nama Pengirim</label>
               <InputText
                 id="bankHolder"
                 name="bankHolder"
