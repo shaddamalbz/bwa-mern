@@ -4,7 +4,6 @@ import Fade from "react-reveal/Fade";
 import Button from "elements/Button";
 
 export default function Categories({ data }) {
-  console.log(data);
   return data.map((category, index1) => {
     if (category.itemId.length === 0) return null;
 
