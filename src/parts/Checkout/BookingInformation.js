@@ -5,7 +5,6 @@ import { InputText } from "elements/Form";
 
 export default function BookingInformation(props) {
   const { data, ItemDetails, checkout } = props;
-
   return (
     <Fade>
       <div className="container" style={{ marginBottom: 30 }}>
@@ -15,15 +14,15 @@ export default function BookingInformation(props) {
               <div className="card">
                 <figure className="img-wrapper" style={{ height: 270 }}>
                   <img
-                    src={ItemDetails.imageUrls[0].url}
-                    alt={ItemDetails.name}
                     className="img-cover"
+                    src={`${process.env.REACT_APP_HOST}/${ItemDetails.imageId[0].imageUrl}`}
+                    alt={ItemDetails.title}
                   />
                 </figure>
                 <div className="row align-items-center">
                   <div className="col">
                     <div className="meta-wrapper">
-                      <h5>{ItemDetails.name}</h5>
+                      <h5>{ItemDetails.title}</h5>
                       <span className="text-gray-500">
                         {ItemDetails.city}, {ItemDetails.country}
                       </span>
@@ -31,11 +30,10 @@ export default function BookingInformation(props) {
                   </div>
                   <div className="col-auto">
                     <span>
-                      ${+checkout.duration * ItemDetails.price} USD{" "}
-                      <span className="text-gray-500">
-                        {checkout.duration} {ItemDetails.unit}
-                        {+checkout.duration > 1 ? "s" : ""}
-                      </span>
+                      ${+checkout.duration * ItemDetails.price} USD
+                      <span className="text-gray-500"> per </span>
+                      {checkout.duration} {ItemDetails.unit}
+                      {+checkout.duration > 1 ? "s" : ""}
                     </span>
                   </div>
                 </div>
@@ -51,6 +49,7 @@ export default function BookingInformation(props) {
                 value={data.firstName}
                 onChange={props.onChange}
               />
+
               <label htmlFor="lastName">Last Name</label>
               <InputText
                 id="lastName"
@@ -58,6 +57,7 @@ export default function BookingInformation(props) {
                 value={data.lastName}
                 onChange={props.onChange}
               />
+
               <label htmlFor="email">Email Address</label>
               <InputText
                 id="email"
@@ -66,6 +66,7 @@ export default function BookingInformation(props) {
                 value={data.email}
                 onChange={props.onChange}
               />
+
               <label htmlFor="phone">Phone Number</label>
               <InputText
                 id="phone"
